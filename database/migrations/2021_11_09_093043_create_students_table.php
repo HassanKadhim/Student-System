@@ -21,7 +21,8 @@ class CreateStudentsTable extends Migration
             $table->string('district');
             $table->string('phoneNumbe');
             $table->integer('type')->default(1); // 1 => Morning | 2 => Pararal | 3 => Night
-            $table->foreignId('stage_id')->constrained('stages')->onDelete('cascade');
+            // $table->foreignId('stage_id')->constrained('stages')->onDelete('cascade')->nullable();
+            // $table->foreignId('department_id')->constrained('departments')->onDelete('cascade')->nullable();
 
             $table->timestamps();
         });

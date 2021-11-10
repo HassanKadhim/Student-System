@@ -15,9 +15,9 @@ class CreateTimesheetsTable extends Migration
     {
         Schema::create('timesheets', function (Blueprint $table) {
             $table->id();
-            $table->date("date");
-            $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
-            $table->foreignId('student_id')->constrained('students')->onDelete('cascade');
+            $table->date("date")->nullable();
+            // $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade')->nullable();
+            // $table->foreignId('student_id')->constrained('students')->onDelete('cascade')->nullable();
             $table->timestamps();
         });
     }
