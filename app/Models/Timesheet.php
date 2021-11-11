@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Timesheet extends Model
 {
+    public function student(){
+        return $this->belongsTo(Student::class);
+    }
     use HasFactory;
 }

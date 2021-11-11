@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Eaxm extends Model
 {
+    public function sbject(){
+        return $this->belongsTo(Subject::class);
+    }
+
+    public function grade(){
+        return $this->belongsTo(Grade::class);
+    }
+
+
     use HasFactory;
 }
