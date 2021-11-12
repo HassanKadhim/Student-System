@@ -9,7 +9,7 @@
                             <span class="remainingTimeSpan">
                             </span>
                         <span class="text-danger">لقد انتهى الامتحان</span>
-                    <input class="timeRemaining" type="hidden" value="<?=$examsTimestamp_remaining?>" />
+                    <input class="timeRemaining" type="hidden" value="dg" />
                     </h2>
                 </div>
             </div>
