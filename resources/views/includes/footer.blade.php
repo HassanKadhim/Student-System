@@ -1,26 +1,9 @@
-<div class="mt-3">
-    <div class="card card-stats">
-        <!-- Card body -->
-        <div class="card-body">
-            <div class="row p-2">
-                <div class="col">
-                    <h2 class="card-title text-center text-uppercase mb-0">
-                            الوقت المتبقي : 
-                            <span class="remainingTimeSpan">
-                            </span>
-                        <span class="text-danger">لقد انتهى الامتحان</span>
-                    <input class="timeRemaining" type="hidden" value="dg" />
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
-<!-- Footer -->
+<body>
+    <!-- Footer -->
 <footer class="footer">
-    <div class="row align-items-center justify-content-xl-between" dir="ltr">
+    <div class="row align-items-center justify-content-xl-between " dir="ltr">
         <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
                 <a href="#" class="font-weight-bold">University of Basra<br/><small>Computer Science & Information Technology</small></a>
@@ -28,25 +11,11 @@
         </div>
         <div class="col-xl-6">
             <div class="copyright text-center text-xl-right text-muted">
-                <span class="text-primary font-weight-bold" dir="rtl">
-                مرحبا،
-                </span>
-                <a href="#" class="font-weight-bold">
-                <br/><small>تسجيل الخروج</small>
-                </a>
                 
-                - <a href="#" class="font-weight-bold">
-                <small>لوحة الإدارة</small>
-                </a>
-
             </div>
         </div>
     </div>
 </footer>
-</div>
-</div>
-
-</body>
 
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
@@ -69,3 +38,6 @@
   // });
 // });
 </script>
+
+</body>
+</html>

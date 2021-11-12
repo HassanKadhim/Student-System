@@ -7,7 +7,7 @@
 {{-- CONTENT --}}
 @section('content')
 
-<h1>sdfsdf</h1>
+
 
 
 @stop
