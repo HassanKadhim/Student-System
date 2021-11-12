@@ -1,0 +1,247 @@
+/* 
+ * Noto Kufi Arabic (Arabic) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(NotoKufiArabic-Regular.eot);
+  src: url(NotoKufiArabic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(NotoKufiArabic-Regular.woff2) format('woff2'),
+       url(NotoKufiArabic-Regular.woff) format('woff'),
+       url(NotoKufiArabic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(NotoKufiArabic-Bold.eot);
+  src: url(NotoKufiArabic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(NotoKufiArabic-Bold.woff2) format('woff2'),
+       url(NotoKufiArabic-Bold.woff) format('woff'),
+       url(NotoKufiArabic-Bold.ttf) format('truetype');
+}
+
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(pxiEyp8kv8JHgFVrJJbecmNE.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body{
+	font-family: 'Noto Kufi Arabic', 'Poppins', sans-serif !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4696ff;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2785ff; 
+}
+
+.poppins{
+	font-family: 'Poppins', sans-serif !important;
+}
+.col-sm-4 a, .col-sm-12 a{
+	color: #eee;
+    text-decoration: none;
+}
+.col-sm-4 a:hover, .col-sm-12 a:hover{
+	color: #ccc;
+    text-decoration: none;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+	border-color:#343a40 !important;
+}
+.nav-tabs .nav-item{
+	margin-bottom: 0px !important;
+}
+.nav-tabs {
+    border-bottom: 0 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	color:#eee!important;
+    background-color: #343a40!important;
+}
+.nav-pills .nav-link{
+	text-align:center;
+    color: #a2abb5!important;
+	transition:.4s all;
+}
+.nav-pills .nav-link:hover{
+    color: #cad2da!important;
+}
+.ar{
+	font-family: 'Noto Kufi Arabic', sans-serif;
+	text-align:right;
+}
+.d-rtl{
+	direction:rtl;
+}
+.d-ltr{
+	direction:ltr;
+}
+.as{
+	font-family: 'Righteous', cursive;
+}
+.custom-control-label::before {
+    left: 2rem !important;
+}
+.custom-control-label::after {
+    left: 2rem !important;
+}
+.custom-control{
+	padding-right: 1.5rem !important;
+}
+.finance-custom-control-label{
+	padding-right: 4.4rem !important;
+}
+.finance-custom-control-label::after{
+    left: 4.3rem !important;
+}
+.finance-custom-control-label::before{
+    left: 4.4rem !important;
+}
+
+
+
+@media all {
+	.page-break	{ display: none; }
+}
+
+@media print {
+	.page-break	{ display: block; page-break-before: always; }
+	body{
+		background:#fff !important;
+	}
+}
+
+#wasilReport{
+	padding: 0 30px;
+}
+
+
+table.tableSection {
+  table-layout:fixed;
+  width:100%;
+}
+table.tableSection td {
+        white-space: normal; /* css-3 */
+        white-space: -moz-normal; /* Mozilla, since 1999 */
+        white-space: -normal; /* Opera 4-6 */
+        white-space: -o-normal; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+table.tableSection2 {
+  width:100%;
+}
+table.tableSection2 td.wrap, th.wrap {
+        white-space: normal; /* css-3 */
+        white-space: -moz-normal; /* Mozilla, since 1999 */
+        white-space: -normal; /* Opera 4-6 */
+        white-space: -o-normal; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.sidenav-edit{
+  position: static !important;
+  width: 100%;
+  height: 100%;
+  max-width: 100% !important;
+}
+
+.iconSuccess:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+}
+
+.iconSuccess:hover {
+  color: #24a46d !important;
+}
+
+
+.iconSuccess:hover:after {
+  display: none;
+}
+
+.iconSuccess:hover:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  font-weight: 900;
+  position: absolute;
+  font-size: 20px;
+  top: 60%;
+  left: 57.5%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.cbLabel{
+  font-size: 1rem !important;
+}
+.cbLabel:before{
+  top: -0.125rem !important;
+}
+.cbLabel:after{
+  top: -0.125rem !important;
+}
+
+.navbar-vertical .navbar-nav .nav-link.active {
+  background: #fafafa !important;
+}
+
+section {
+  height: 100vh;
+  page-break-after: always;
+}
+
+.printGoalParent{
+  display: none;
+}
+
+.text-underline{
+  text-decoration: underline !important;
+}
