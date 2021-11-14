@@ -8,14 +8,14 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-        <div class="row flex-nowrap" id="app">
-            <div class="col p-0  mt-5">
-                <section class="">
-                    <div class="container-fluid">
-                        {{-- Main Content --}}
-                        @yield('content')
+            <div class="container-fluid mt-4 flex-nowrap" id="app">
+                <div class="row mb-5 mb-xl-0">
+                    <div class="col-xl-3">
+                        @include('includes.sidbar')
                     </div>
-                </section>
+            <div class="col-xl-9">
+                {{-- Main Content --}}
+                @yield('content')
             </div>
         </div>
         <footer>

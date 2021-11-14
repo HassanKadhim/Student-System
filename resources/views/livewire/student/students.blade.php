@@ -1,0 +1,71 @@
+<div>
+    <div class="row mt-4">
+        <div class="col">
+            <div class="card bg-default shadow">
+                <div class="card-header bg-transparent border-0">
+                    <h3 class="text-white mb-0">الطلاب</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-dark table-flush">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" class="sort" data-sort="name">الاسم</th>
+                                <th scope="col" class="sort" data-sort="budget">القسم</th>
+                                <th scope="col" class="sort" data-sort="status">المرحلة </th>
+                                <th scope="col">الدراسة</th>
+                                <th scope="col" class="sort" data-sort="completion">عدد الغيابات</th>
+                                <th scope="col"> التحكم</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list text-right">
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+                                        <a href="#" class="avatar rounded-circle mr-3">
+                                            <img alt="" src="#">
+                                        </a>
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm mr-2">حسن كاظم</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <td class="budget">
+                                    نظم معلومات 
+                                </td>
+                                <td>
+                                    <span class="badge badge-dot mr-4">
+                                        
+                                        <span class="status">الرابعة</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span> مسائي</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class=" ml-2">6</span>
+                                        <div>
+                                            <span>ايام</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

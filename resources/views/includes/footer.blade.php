@@ -9,12 +9,30 @@
                 <a href="#" class="font-weight-bold">University of Basra<br/><small>Computer Science & Information Technology</small></a>
             </div>
         </div>
+        {{-- @if (Auth::user()->name)
         <div class="col-xl-6">
             <div class="copyright text-center text-xl-right text-muted">
+                <span class="text-primary font-weight-bold" dir="rtl">
+                    مرحبا، {{Auth::user()->name}}
+                </span>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="{{ route('logout') }}" class="font-weight-bold" onclick="event.preventDefault();
+                    this.closest('form').submit();">
+                                
+                        <br/><small>تسجيل الخروج</small>
+                    </a>
+                    - <a href="#" class="font-weight-bold">
+                        <small>لوحة الإدارة</small>
+                    </a>
+                </form>
                 
             </div>
         </div>
-    </div>
+        @else --}}
+        <div class="col-xl-6">
+        </div>    
+        {{-- @endif --}}
 </footer>
 
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>

@@ -7,7 +7,6 @@
 {{-- CONTENT --}}
 @section('content')
 
-
-
+@livewire('index')
 
 @stop

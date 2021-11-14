@@ -46,8 +46,8 @@
                 </div>
             </div>
         </nav>
-        <div class="header bg-gradient-info pb-7 pt-5 pt-md-8">
-    
+        <div class="header pb-7 pt-5 pt-md-8 bg-gradient-info " style="background-image: url({{asset('img/cover.jpg')}}); height:200px ; width:100%">
+            
         </div>
     </div>
 </body>
