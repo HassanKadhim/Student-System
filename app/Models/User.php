@@ -38,6 +38,7 @@ class User extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
+        'type',
     ];
 
     /**
@@ -69,4 +70,8 @@ class User extends Authenticatable implements JWTSubject
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function students(){
+        return $this->hasMany(Student::class);
+    }
 }

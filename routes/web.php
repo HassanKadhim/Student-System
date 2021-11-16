@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/', [MainController::class, 'index'])->name('index');
+    Route::get('/student', [StudentController::class, 'student'])->name('student');
 });
 
 Route::middleware(['auth'])->get('/dashboard', function () {

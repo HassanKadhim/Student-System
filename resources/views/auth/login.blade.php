@@ -47,7 +47,7 @@
     </x-jet-authentication-card>
 </x-guest-layout> --}}
 
-@extends('layouts.master')
+@extends('layouts.auth-master')
 
 {{-- Title --}}
 @section('title', 'Index')

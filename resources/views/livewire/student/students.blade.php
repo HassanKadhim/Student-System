@@ -1,10 +1,28 @@
 <div>
-    <div class="row mt-4">
+    <div class="row ">
         <div class="col">
             <div class="card bg-default shadow">
-                <div class="card-header bg-transparent border-0">
-                    <h3 class="text-white mb-0">الطلاب</h3>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="card-header bg-transparent border-0">
+                            <h3 class="text-white mb-0">الطلاب</h3>
+                        </div>
+                    </div>
+                    <div class="col-4 mt-2">
+                        <form class="navbar-search navbar-search-light ml-2  ">
+                            <div class="form-group mb-0 ">
+                            <div class="input-group input-group-alternative input-group-merge ">
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                </div>
+                                <input class="form-control" placeholder="البحث" type="text">
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
                 </div>
+                
                 <div class="table-responsive">
                     <table class="table align-items-center table-dark table-flush">
                         <thead class="thead-dark">

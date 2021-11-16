@@ -30,9 +30,9 @@
             </div>
         </div>
         @else --}}
-        <div class="col-xl-6">
+        {{-- <div class="col-xl-6">
         </div>    
-        {{-- @endif --}}
+        @endif --}}
 </footer>
 
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
