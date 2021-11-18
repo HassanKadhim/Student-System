@@ -15,8 +15,15 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
-            // $table->string('name')->nullable();
-            // $table->foreignId('stage_id')->constrained('stages')->onDelete('cascade')->nullable();
+            $table->unsignedBigInteger('stage_id')->nullable();
+            $table->string('name')->nullable();
+
+
+            $table->foreign('stage_id')
+            ->references('id')
+            ->on('stages')
+            ->onDelete('cascade'); 
+
             $table->timestamps();
         });
     }

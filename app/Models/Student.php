@@ -8,12 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     protected $fillable =[
+        'user_id',
+        'stage_id',
         'card_number',
         'mother_name',
         'city',
         'district',
-        'phoneNumbe',
-        'type'
+        'phoneNumber',
+        'type',
+        'gender',
+        'birthday'
     ];
     public function timesheets(){
         return $this->hasMany(Timesheet::class);
@@ -21,6 +25,10 @@ class Student extends Model
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function stage(){
+        return $this->belongsTo(Stage::class);
     }
     use HasFactory;
 }

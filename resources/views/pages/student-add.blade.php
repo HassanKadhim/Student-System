@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 {{-- Title --}}
-@section('title', 'الصفحة الرئيسية')
+@section('title', 'اضافة طالب')
 
 
 {{-- CONTENT --}}
 @section('content')
 
-@livewire('index')
+@livewire('student.student-add')
 
 @stop

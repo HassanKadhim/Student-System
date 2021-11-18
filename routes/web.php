@@ -17,10 +17,14 @@ use App\Http\Controllers\StudentController;
 
 
 Route::group(['middleware' => 'auth'], function() {
+    
     Route::get('/', [MainController::class, 'index'])->name('index');
-    Route::get('/student', [StudentController::class, 'student'])->name('student');
+    Route::view('/student', 'pages.student')->name('student');
+    Route::view('/eaxm', 'pages.eaxm')->name('eaxm');
+    Route::view('/stage', 'pages.stage')->name('stage');
+    Route::view('/subject', 'pages.subject')->name('subject');
+    Route::view('/timesheet', 'pages.timesheet')->name('timesheet');
+    Route::view('/student-add', 'pages.student-add')->name('student-add');
+    
 });
 
-Route::middleware(['auth'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');

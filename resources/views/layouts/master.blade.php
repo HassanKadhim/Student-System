@@ -5,6 +5,7 @@
         <title>Student - @yield('title')</title>
         @livewireStyles
         @livewireScripts
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
@@ -22,5 +23,7 @@
         <footer>
             @include('includes.footer')
         </footer>
+        <x-livewire-alert::scripts />
+        <x-livewire-alert::flash />
     </body>
 </html>

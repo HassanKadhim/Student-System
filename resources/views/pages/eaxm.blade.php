@@ -1,8 +1,7 @@
 @extends('layouts.master')
 
 {{-- Title --}}
-@section('title', 'الصفحة الرئيسية')
-
+@section('title', 'الامتحانات')
 
 {{-- CONTENT --}}
 @section('content')

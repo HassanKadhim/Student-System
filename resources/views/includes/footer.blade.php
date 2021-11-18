@@ -45,6 +45,8 @@
 <!--   Argon JS   -->
 <script src="{{asset('js/argon-dashboard.js?v=1.1.0')}}"></script>
 
+<script src="{{asset('js/sweetalert2.js')}}"></script>
+<script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script> 
 <script>if (window.module) module = window.module;</script>
 
 <script>

@@ -16,8 +16,11 @@
 	<!--   Core   -->
 	<script src="{{asset('js/plugins/jquery/dist/jquery.min.js')}}"></script>
 	<script src="{{asset('js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+
     </head>
 <body dir="rtl">
+    @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <div class="main-content">
         <!-- Navbar -->
         <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">

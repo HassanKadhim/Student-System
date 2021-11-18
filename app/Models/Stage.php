@@ -7,12 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stage extends Model
 {
+    protected $fillable =[
+        'name'
+    ];
     public function subjects(){
         return $this->hasMany(Subject::class);
     }
-    
-    public function department(){
-        return $this->belongsTo(Department::class);
+
+    public function students(){
+        return $this->hasMany(Student::class);
     }
+    
     use HasFactory;
 }

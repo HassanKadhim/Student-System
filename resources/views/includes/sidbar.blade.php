@@ -25,36 +25,36 @@
                     <div class="container">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class=" nav-link  active" href="{{ route('index') }}"> <i class="ni ni-tv-2 text-info"></i> الصفحة الرئيسية
+                            <a class="nav-link  @if(route('index')) active @endif  "  href="{{ route('index') }}"> <i class="ni ni-tv-2 text-info"></i> الصفحة الرئيسية
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="{{ route('subject') }}">
                                 <i class="fas fa-book text-info"></i> المواد
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#">
+                                <a class="nav-link " href="{{ route('eaxm') }}">
                                 <i class="fas fa-book-open text-info"></i> الامتحانات
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('student') }}">
+                                <a class="nav-link"  href="{{ route('student') }}">
                                 <i class="fas fa-user text-info"></i> الطلاب
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#">
+                                <a class="nav-link " href="{{ route('timesheet') }}">
                                 <i class="far fa-calendar-check text-info"></i> الغيابات
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#">
+                                <a class="nav-link " href="{{ route('stage') }}">
                                 <i class="fas fa-bookmark text-info"></i> الاقسام
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#">
+                                <a class="nav-link " href="{{ route('student-add') }}">
                                 <i class="fas fa-graduation-cap text-info"></i> الدرجات
                                 </a>
                             </li>
@@ -65,5 +65,5 @@
             </div>
         </div>
     </div>
-        <br/><br/><a class="btn btn-warning position-relative fixed-bottom btn-block" id="tabs-student-add-tab" data-toggle="tab" href="#tabs-student-add" role="tab" aria-controls="tabs-student-add" aria-selected="false">اضافة طالب جديد</a>';
+        <br/><br/><a class="btn btn-warning position-relative fixed-bottom btn-block"   href="{{ route('student-add') }}" >اضافة طالب جديد</a>;
 </nav>
