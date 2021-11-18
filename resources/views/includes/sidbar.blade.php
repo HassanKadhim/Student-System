@@ -29,16 +29,6 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('subject') }}">
-                                <i class="fas fa-book text-info"></i> المواد
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="{{ route('eaxm') }}">
-                                <i class="fas fa-book-open text-info"></i> الامتحانات
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link"  href="{{ route('student') }}">
                                 <i class="fas fa-user text-info"></i> الطلاب
                                 </a>
@@ -53,6 +43,17 @@
                                 <i class="fas fa-bookmark text-info"></i> الاقسام
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('subject') }}">
+                                <i class="fas fa-book text-info"></i> المواد
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ route('eaxm') }}">
+                                <i class="fas fa-book-open text-info"></i> الامتحانات
+                                </a>
+                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link " href="{{ route('student-add') }}">
                                 <i class="fas fa-graduation-cap text-info"></i> الدرجات
