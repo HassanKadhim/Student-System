@@ -15,7 +15,7 @@
                                 <div class="input-group-prepend ">
                                     <span class="input-group-text"><i class="fas fa-search"></i></span>
                                 </div>
-                                <input class="form-control" placeholder="البحث" type="text">
+                                <input class="form-control" placeholder="البحث" wire:model="search" type="search">
                                 </div>
                             </div>
                             
@@ -91,6 +91,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $students->links() }}
                 </div>
             </div>
         </div>

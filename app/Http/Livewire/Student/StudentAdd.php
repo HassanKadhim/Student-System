@@ -3,15 +3,18 @@
 namespace App\Http\Livewire\Student;
 use App\Models\User;
 use Livewire\Component;
+use App\Models\Stage;
 use Illuminate\Support\Facades\Hash;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class StudentAdd extends Component {
+    
+    use LivewireAlert;
 
-    public $name , $mother_name , $email , $city ,$phoneNumber , $card_number , $district , $type , $birthday , $gender;
+    public $name , $mother_name , $email , $city ,$phoneNumber , $card_number , $district , $type , $birthday , $gender , $stage_id;
 
     protected $rules = [
         'name' => 'required',
-        
     ];
 
     public function submit() {
@@ -34,16 +37,15 @@ class StudentAdd extends Component {
             'phoneNumber'=> $this->phoneNumber ,
             'birthday'=> $this->birthday ,
             'gender'=> $this->gender ,
+            'stage_id'=> $this->stage_id ,
 
         ]);
 
-        $this->alert('success', 'تم إضافة السؤال بنجاح',
-            [
-                'position' =>  'top',
-                'timer' =>  '3000',
-                'toast' =>  true,
-            ]
-        );
+        $this->alert('success', 'تم إضافة الطالب بنجاح',[
+            'position' =>  'top',
+            'timer' =>  '3000',
+            'toast' =>  true,
+        ]);
 
         $this->emitTo('student.students', '$refresh');
 
@@ -54,6 +56,9 @@ class StudentAdd extends Component {
 
     
     public function render() {
-        return view('livewire.student.student-add');
+
+        $stages = Stage::get();
+
+        return view('livewire.student.student-add',[ 'stages' => $stages ]);
     }
 }

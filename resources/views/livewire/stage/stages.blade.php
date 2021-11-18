@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="card-header bg-transparent border-0">
-                            <h3 class="text-white mb-0">المواد</h3>
+                            <h3 class="text-white mb-0">الاقسام/المراحل </h3>
                         </div>
                     </div>
                     <div class="col-4 mt-2">
@@ -15,10 +15,9 @@
                                 <div class="input-group-prepend ">
                                     <span class="input-group-text"><i class="fas fa-search"></i></span>
                                 </div>
-                                <input class="form-control" placeholder="البحث" type="text">
+                                <input wire:model="search" type="search" class="form-control" placeholder="البحث" >
                                 </div>
                             </div>
-                            
                         </form>
                     </div>
                 </div>
@@ -59,6 +58,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $stages->links() }}
                 </div>
             </div>
         </div>

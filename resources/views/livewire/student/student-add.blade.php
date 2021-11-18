@@ -44,12 +44,11 @@
                             </select>
                         </div>
                         <div class="col-6 mt-3">
-                            <select class="form-control section" dir="rtl">
+                            <select class="form-control section" dir="rtl"  wire:model="stage_id">
                                 <option disabled selected >المرحلة </option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                                @foreach($stages as $stage)
+                                <option value="{{$stage->id}}">{{$stage->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="col-3 mt-3">
