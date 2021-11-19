@@ -9,11 +9,16 @@ class Subject extends Model
 {
     protected $fillable = [
         'name',
-        'stage_id'
+        'student_id',
+        'subject_id'
     ];
 
     public function stage(){
         return $this->belongsTo(Stage::class);
+    }
+
+    public function timesheets(){
+        return $this->hasMany(Timesheet::class);
     }
     use HasFactory;
 }

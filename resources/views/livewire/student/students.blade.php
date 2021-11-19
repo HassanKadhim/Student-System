@@ -11,18 +11,18 @@
                     <div class="col-4 mt-2">
                         <form class="navbar-search navbar-search-light ml-2  ">
                             <div class="form-group mb-0 ">
-                            <div class="input-group input-group-alternative input-group-merge ">
-                                <div class="input-group-prepend ">
-                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
-                                </div>
-                                <input class="form-control" placeholder="البحث" wire:model="search" type="search">
+                                <div class="input-group input-group-alternative input-group-merge ">
+                                    <div class="input-group-prepend ">
+                                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="البحث" wire:model="search" type="search">
                                 </div>
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="table-responsive">
                     <table class="table align-items-center table-dark table-flush">
                         <thead class="thead-dark">
@@ -69,9 +69,15 @@
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <span class=" ml-2">6</span>
+                                        @if ($student->timesheets->count() <= 1)
+                                        <span class="badge badge-md badge-circle badge-floating badge-success text-white border-white">{{$student->timesheets->count()}}</span>
+                                        @elseif($student->timesheets->count() == 2 )
+                                        <span class="badge badge-md badge-circle badge-floating badge-warning text-white border-white">{{$student->timesheets->count()}}</span>
+                                        @else
+                                        <span class="badge badge-md badge-circle badge-floating badge-danger  border-white">{{$student->timesheets->count()}}</span>
+                                        @endif
                                         <div>
-                                            <span>ايام</span>
+                                            <span class="mr-2">ايام</span>
                                         </div>
                                     </div>
                                 </td>

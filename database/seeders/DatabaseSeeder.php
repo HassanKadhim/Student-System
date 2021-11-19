@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             StageSeeder::class,
             SubjectSeeder::class,
             StudentSeeder::class,
+            TimeSeeder::class,
         ]);
     }
 }

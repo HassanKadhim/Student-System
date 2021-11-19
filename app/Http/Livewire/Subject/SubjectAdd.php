@@ -22,7 +22,7 @@ class SubjectAdd extends Component {
 
         Subject::create([
             'name'     => $this->name,
-            'stage_id'    => $this->stage_id,
+            'stage_id' => $this->stage_id,
         ]);
 
         $this->alert('success', 'تم إضافة المادة بنجاح',[
@@ -31,7 +31,7 @@ class SubjectAdd extends Component {
             'toast' =>  true,
         ]);
 
-        $this->emitTo('student.students', '$refresh');
+        $this->emitTo('subject.subjects', '$refresh');
 
     }
 
