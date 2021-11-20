@@ -20,5 +20,9 @@ class Subject extends Model
     public function timesheets(){
         return $this->hasMany(Timesheet::class);
     }
+
+    public function grades(){
+        return $this->hasMany(Grade::class);
+    }
     use HasFactory;
 }

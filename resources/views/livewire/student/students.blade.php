@@ -72,29 +72,24 @@
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        @if ($student->timesheets->count() <= 1)
-                                        <span class="badge badge-md badge-circle badge-floating badge-success text-white border-white">{{$student->timesheets->count()}}</span>
-                                        @elseif($student->timesheets->count() == 2 )
-                                        <span class="badge badge-md badge-circle badge-floating badge-warning text-white border-white">{{$student->timesheets->count()}}</span>
-                                        @else
-                                        <span class="badge badge-md badge-circle badge-floating badge-danger  border-white">{{$student->timesheets->count()}}</span>
-                                        @endif
-                                        <div>
-                                            <span class="mr-2">ايام</span>
-                                        </div>
+                                            @if ($student->timesheets->count() <= 1) <span class="badge badge-md badge-circle badge-floating badge-success text-white border-white">{{$student->timesheets->count()}}</span>
+                                            @elseif($student->timesheets->count() == 2 )
+                                            <span class="badge badge-md badge-circle badge-floating badge-warning text-white border-white">{{$student->timesheets->count()}}</span>
+                                            @else
+                                            <span class="badge badge-md badge-circle badge-floating badge-danger  border-white">{{$student->timesheets->count()}}</span>
+                                            @endif
+                                            <div>
+                                                <span class="mr-2">ايام</span>
+                                            </div>
                                     </div>
                                 </td>
-                                <td class="text-right">
-                                    <div class="dropdown">
-                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
+                                <td class="td-actions text-right">
+                                    <a rel="tooltip" class="btn btn-info btn-icon btn-sm text-white" id="tabs-student-show-tab" data-toggle="tab" href="#tabs-student-show" role="tab" aria-controls="tabs-student-show" aria-selected="false" @click="id = !id" wire:click="getStudentID({{$student->id}})">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                    <a rel="tooltip" class="btn btn-danger btn-icon btn-sm text-white" data-original-title="حذف" title="" name="deletequestion">
+                                        <i class="fas fa-trash text-denger"></i>
+                                    </a>
                                 </td>
                             </tr>
                             @endforeach

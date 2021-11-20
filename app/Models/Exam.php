@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Exam extends Model
 {
     protected $fillable = [
-        'grade' ,   
-        'exam_id',
-        'student_id'
+        'name'
     ];
 
     public function sbject(){

@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Grade extends Model
 {
     protected $fillable = [
-        'name',
+        'grade',
+        'exam_id',
+        'student_id',
+        'subject_id'
     ];
 
 
@@ -18,6 +21,10 @@ class Grade extends Model
 
     public function exam(){
         return $this->belongsTo(Exam::class);
+    } 
+    
+    public function subject(){
+        return $this->belongsTo(Subject::class);
     }   
     
     use HasFactory;

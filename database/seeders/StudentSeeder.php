@@ -24,14 +24,14 @@ class StudentSeeder extends Seeder
         $student->district = 'ابي الخصيب';
         $student->phoneNumber = '07710000000';
         $student->card_number = '20181923';
-        $student->gender = 'male';
+        $student->gender = 'ذكر';
         $student->birthday = '1999/1/1';
         $student->type = '3';
 
         $student->save();
 
         
-        // id:1
+        // id:2
         $student = new Student();
         
         $student->user_id = 3;
@@ -41,9 +41,25 @@ class StudentSeeder extends Seeder
         $student->district = 'ابي الخصيب';
         $student->phoneNumber = '07710000000';
         $student->card_number = '20189043';
-        $student->gender = 'male';
+        $student->gender = 'ذكر';
         $student->birthday = '1990/1/1';
         $student->type = '1';
+
+        $student->save();
+
+        // id:2
+        $student = new Student();
+        
+        $student->user_id = 4;
+        $student->stage_id = 8;
+        $student->mother_name = 'اسم الام';
+        $student->city = 'بصرة';
+        $student->district = 'شط العرب';
+        $student->phoneNumber = '07719562315';
+        $student->card_number = '20189043';
+        $student->gender = 'ذكر';
+        $student->birthday = '1990/9/8';
+        $student->type = '3';
 
         $student->save();
     }

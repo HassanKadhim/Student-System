@@ -18,6 +18,7 @@ class CreateGradesTable extends Migration
             $table->integer('grade')->nullable();
             $table->unsignedBigInteger('exam_id')->nullable();
             $table->unsignedBigInteger('student_id')->nullable();
+            $table->unsignedBigInteger('subject_id')->nullable();
             
             $table->foreign('student_id')
             ->references('id')
@@ -27,6 +28,11 @@ class CreateGradesTable extends Migration
             $table->foreign('exam_id')
             ->references('id')
             ->on('exams')
+            ->onDelete('cascade');
+
+            $table->foreign('subject_id')
+            ->references('id')
+            ->on('subjects')
             ->onDelete('cascade'); 
 
             $table->timestamps();

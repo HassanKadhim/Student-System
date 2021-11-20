@@ -13,8 +13,9 @@
                     <div class="card-body">
                     <!-- card-body:start -->
                     <div class="row">
-                        <div class="col-12 mt-3">
+                        <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="student_id" >
+                                <option class="text-right" selected disabled>الطالب</option>
                                 @foreach ($students as $student)
                                     <option class="text-right" value="{{ $student->id }}">{{ $student->user->name}}</option>
                                 @endforeach
@@ -22,20 +23,27 @@
                             @error('student_id') <span class="error text-danger">يجب اختيار الطالب</span> @enderror
                         </div>
                         <div class="col-6 mt-3">
-                            <input type="number" wire:model="grade" class="form-control questionsCount" placeholder="الدرجة">
-                            @error('grade') <span class="error text-danger">يجب ادخال الدرجة</span> @enderror
-                        </div>
-                        <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="exam_id" >
+                                <option class="text-right" selected disabled>الامتحان</option>
                                 @foreach ($exams as $exam)
                                     <option class="text-right" value="{{ $exam->id }}">{{ $exam->name}}</option>
                                 @endforeach
                             </select>
                             @error('exam_id') <span class="error text-danger">يجب اختيار الامتحان</span> @enderror
                         </div>
-
-                        
-                        
+                        <div class="col-6 mt-3">
+                            <select class="form-control section" dir="rtl" wire:model="subject_id" >
+                                <option class="text-right" selected disabled>المادة</option>
+                                @foreach ($subjects as $subject)
+                                    <option class="text-right" value="{{ $subject->id }}">{{ $subject->name}}</option>
+                                @endforeach
+                            </select>
+                            @error('subject_id') <span class="error text-danger">يجب اختيار المادة</span> @enderror
+                        </div>
+                        <div class="col-6 mt-3">
+                            <input type="number" wire:model="grade" class="form-control questionsCount" placeholder="الدرجة">
+                            @error('grade') <span class="error text-danger">يجب ادخال الدرجة</span> @enderror
+                        </div>
                         <div class="col-12 mt-5">
                         <button type="submit" class="btn btn-primary btn-block ">اضافة</button>
                         </div>

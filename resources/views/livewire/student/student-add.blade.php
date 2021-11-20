@@ -37,8 +37,8 @@
                         <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model= "gender" >
                                 <option disabled selected  >الجنس</option>
-                                <option value="male">ذكر</option>
-                                <option value="female"> اناثى</option>
+                                <option value="ذكر">ذكر</option>
+                                <option value="اناثى"> اناثى</option>
                             </select>
                             @error('gender') <span class="error text-danger">يجب اختيار الجنس</span> @enderror
                         </div>

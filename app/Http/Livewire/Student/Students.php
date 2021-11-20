@@ -15,6 +15,10 @@ class Students extends Component {
 
     protected $queryString = ['search'];
 
+    public function getStudentID($id){
+        $this->emit('getStudentID' , $id);
+    }
+
     public function render(){
 
         $students = Student::where('card_number', 'like', '%'.$this->search.'%')->orderByDesc('id')->paginate(6);
