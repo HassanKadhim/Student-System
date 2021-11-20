@@ -16,7 +16,7 @@ class SubjectSeeder extends Seeder
         //id 1
         $subject = new Subject();
         $subject->stage_id = 1;
-        $subject->name = 'Progrimeng 1';
+        $subject->name = 'Programing 1';
 
         $subject->save();
 
@@ -44,7 +44,7 @@ class SubjectSeeder extends Seeder
         //id 5
         $subject = new Subject();
         $subject->stage_id = 5;
-        $subject->name = 'System analyse';
+        $subject->name = 'System analysis';
 
         $subject->save();
 
@@ -58,7 +58,7 @@ class SubjectSeeder extends Seeder
         //id 7
         $subject = new Subject();
         $subject->stage_id = 7;
-        $subject->name = 'Softwear engner';
+        $subject->name = 'software engineering';
 
         $subject->save();
 

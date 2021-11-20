@@ -1,5 +1,4 @@
 <div>
-    
     <div class="row">
         <div class="col">
             <div class="card">
@@ -7,7 +6,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="card-header bg-transparent border-0">
-                            <h3 class=" mb-0">الغيابات</h3>
+                            <h3 class=" mb-0">الامتحانات </h3>
                         </div>
                     </div>
                     <div class="col-4 mt-2">
@@ -30,29 +29,21 @@
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col" class="text-center" data-sort="name">#</th>
-                                <th scope="col" class="sort" data-sort="name">اسم الطالب </th>
-                                <th scope="col" class="sort" data-sort="name">المادة </th>
-                                <th scope="col" class="sort" data-sort="budget">التاريخ</th>
+                                <th scope="col" class="sort" data-sort="budget">المرحلة / القسم</th>
                                 <th scope="col"> التحكم</th>
                             </tr>
                         </thead>
                         <tbody class="list text-right">
-                            @foreach ($times as $index => $time)
+                            @foreach ($exams as $index => $exam)
                             <tr>
                                 <td class="text-center">{{$index+1}}</td>
                                 <th scope="row">
                                     <div class="media align-items-center">
                                         <div class="media-body">
-                                            <span class="name mb-0 text-sm mr-2">{{$time->student->user->name}}</span>
+                                            <span class="name mb-0 text-sm mr-2">{{$exam->name}}</span>
                                         </div>
                                     </div>
                                 </th>
-                                <td class="budget">
-                                    {{$time->subject->name}}
-                                </td>
-                                <td class="budget">
-                                    {{$time->date}}
-                                </td>
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -69,10 +60,9 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $times->links() }}
+                    {{ $exams->links() }}
                 </div>
             </div>
         </div>
     </div>
-    
 </div>

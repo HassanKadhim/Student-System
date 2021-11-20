@@ -4,6 +4,8 @@ namespace App\Http\Livewire\Student;
 use App\Models\User;
 use Livewire\Component;
 use App\Models\Stage;
+use App\Mail\SendPassword;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
@@ -49,6 +51,7 @@ class StudentAdd extends Component {
 
         $this->emitTo('student.students', '$refresh');
 
+        Mail::to($this->email)->send(new SendPassword($password));
 
 
 

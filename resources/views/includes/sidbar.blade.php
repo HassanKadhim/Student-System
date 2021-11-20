@@ -25,37 +25,37 @@
                     <div class="container">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                            <a class="nav-link  @if(route('index')) active @endif  "  href="{{ route('index') }}"> <i class="ni ni-tv-2 text-info"></i> الصفحة الرئيسية
+                            <a class="nav-link  @if(Route::currentRouteName()== 'index') active @endif  "  href="{{ route('index') }}"> <i class="ni ni-tv-2 text-info"></i> الصفحة الرئيسية
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="{{ route('student') }}">
+                                <a class="nav-link @if(Route::currentRouteName()== 'student') active @endif"  href="{{ route('student') }}">
                                 <i class="fas fa-user text-info"></i> الطلاب
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('timesheet') }}">
+                                <a class="nav-link @if(Route::currentRouteName()== 'timesheet') active @endif" href="{{ route('timesheet') }}">
                                 <i class="far fa-calendar-check text-info"></i> الغيابات
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('stage') }}">
+                                <a class="nav-link @if(Route::currentRouteName()== 'stage') active @endif " href="{{ route('stage') }}">
                                 <i class="fas fa-bookmark text-info"></i> الاقسام
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('subject') }}">
+                                <a class="nav-link @if(Route::currentRouteName()== 'subject') active @endif " href="{{ route('subject') }}">
                                 <i class="fas fa-book text-info"></i> المواد
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('eaxm') }}">
+                                <a class="nav-link @if(Route::currentRouteName()== 'eaxm') active @endif " href="{{ route('eaxm') }}">
                                 <i class="fas fa-book-open text-info"></i> الامتحانات
                                 </a>
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link " href="{{ route('student-add') }}">
+                                <a class="nav-link @if(Route::currentRouteName()== 'grade') active @endif " href="{{ route('grade') }}">
                                 <i class="fas fa-graduation-cap text-info"></i> الدرجات
                                 </a>
                             </li>

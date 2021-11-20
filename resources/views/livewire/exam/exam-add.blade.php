@@ -6,24 +6,17 @@
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col-lg-8">
-                            <h2 class="mb-0">اضافة مادة جديد</h2>
+                            <h2 class="mb-0">اضافة امتحان جديد</h2>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
                     <!-- card-body:start -->
                     <div class="row">
-                        <div class="col-6 mt-3">
-                            <input type="text" wire:model="name" class="form-control questionsCount" placeholder="اسم المادة">
+                        <div class="col-12 mt-3">
+                            <input type="text" wire:model="name" class="form-control questionsCount" placeholder="اضافة امتحان">
+                            @error('name') <span class="error text-danger">يجب ادخال الحقل</span> @enderror
                         </div>
-                        <div class="col-6 mt-3">
-                            <select class="form-control section" dir="rtl" wire:model="stage_id" >
-                                @foreach ($stages as $stage)
-                                    <option class="text-right" value="{{ $stage->id }}">{{ $stage->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        
                         <div class="col-12 mt-5">
                         <button type="submit" class="btn btn-primary btn-block ">اضافة</button>
                         </div>
@@ -35,3 +28,4 @@
         </div>
     </form>
 </div>
+

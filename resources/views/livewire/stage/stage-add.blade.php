@@ -14,8 +14,9 @@
                     <!-- card-body:start -->
                     <div class="row">
                         <div class="col-12 mt-3">
-                            <input type="text" wire:model="name" class="form-control questionsCount" placeholder="اسم المادة">
+                            <input type="text" wire:model="name" class="form-control questionsCount" placeholder="المرحلة - القسم">
                         </div>
+                        @error('name') <span class="error text-danger">يجب ادخال المرحلة - القسم</span> @enderror
                         <div class="col-12 mt-5">
                         <button type="submit" class="btn btn-primary btn-block ">اضافة</button>
                         </div>

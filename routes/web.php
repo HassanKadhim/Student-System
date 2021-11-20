@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::view('/stage', 'pages.stage')->name('stage');
     Route::view('/subject', 'pages.subject')->name('subject');
     Route::view('/timesheet', 'pages.timesheet')->name('timesheet');
+    Route::view('/grade', 'pages.grade')->name('grade');
     Route::view('/student-add', 'pages.student-add')->name('student-add');
     
 });

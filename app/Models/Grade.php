@@ -7,9 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grade extends Model
 {
-    public function eaxms(){
-        return $this->hasMany(Exam::class);
+    protected $fillable = [
+        'name',
+    ];
+
+
+    public function student(){
+        return $this->belongsTo(Student::class);
     }
+
+    public function exam(){
+        return $this->belongsTo(Exam::class);
+    }   
     
     use HasFactory;
 }
