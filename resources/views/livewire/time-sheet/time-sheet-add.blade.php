@@ -15,8 +15,8 @@
                     <div class="row">
                         <div class="col-4 mt-3">
                             <input type="date" wire:model="date" class="form-control questionsCount" placeholder="التاريخ">
+                            @error('date') <span class="error text-danger">يجب اختيار التاريخ</span> @enderror
                         </div>
-                        @error('date') <span class="error text-danger">يجب اختيار التاريخ</span> @enderror
                         <div class="col-4 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="student_id" >
                                 <option class="text-right" disabled selected>الطالب</option>
@@ -33,12 +33,11 @@
                                     <option class="text-right" value="{{ $subject->id }}">{{ $subject->name}}</option>
                                 @endforeach
                             </select>
-
                             @error('subject_id') <span class="error text-danger">يجب اختيار المادة</span> @enderror
                         </div>
                         
                         <div class="col-12 mt-5">
-                        <button type="submit" class="btn btn-primary btn-block ">اضافة</button>
+                        <button type="submit" class="btn bg-gradient-info text-white btn-block ">اضافة</button>
                         </div>
                     </div>
                     <!-- card-body:finish -->

@@ -20,8 +20,10 @@ class Students extends Component {
     }
 
     public function render(){
-
-        $students = Student::where('card_number', 'like', '%'.$this->search.'%')->orderByDesc('id')->paginate(6);
+        $search = '%'.$this->search.'%';
+        $students = Student::whereHas('user' , function($query) use($search){
+            $query->where('name' , 'LIKE' , $search);
+            })->orderByDesc('id')->paginate(6);
 
         return view('livewire.student.students',[ "students" => $students ]);
     }

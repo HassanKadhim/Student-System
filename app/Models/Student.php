@@ -22,6 +22,10 @@ class Student extends Model
     public function timesheets(){
         return $this->hasMany(Timesheet::class);
     }
+    
+    public function notifications(){
+        return $this->hasMany(notification::class);
+    }
 
     public function grades(){
         return $this->hasMany(Grade::class);

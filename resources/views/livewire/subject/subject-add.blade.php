@@ -25,7 +25,7 @@
                         </div>
                         
                         <div class="col-12 mt-5">
-                        <button type="submit" class="btn btn-primary btn-block ">اضافة</button>
+                        <button type="submit" class="btn bg-gradient-info text-white btn-block ">اضافة</button>
                         </div>
                     </div>
                     <!-- card-body:finish -->

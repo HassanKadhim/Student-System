@@ -1,22 +1,15 @@
 <?php
 
-namespace App\Http\Livewire\Student;
-use App\Models\Student;
-use App\Models\notification;
-use Livewire\Component;
+namespace App\Http\Livewire\Newsletter;
+use App\Models\NewsLetter;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+use Livewire\Component;
 
-class StudentShow extends Component {
-
+class NewsletterAdd extends Component
+{
     use  LivewireAlert;
-    protected $listeners = ['$refresh' , 'getStudentID' ];
+    public $title , $body ;
     
-    public $ID , $student , $title , $body ;
-
-    public function getStudentID($id){
-        $this->ID = $id;
-        $this->student = Student::find($this->ID);
-    }
     protected $rules = [
         'title' => 'required',
         'body' => 'required',
@@ -25,10 +18,9 @@ class StudentShow extends Component {
     public function submit() {
         $this->validate();
 
-        notification::create([
+        NewsLetter::create([
             'title' => $this->title,
             'body' => $this->body,
-            'student_id' => $this->ID,
         ]);
 
         $this->alert('success', 'تم ',[
@@ -36,11 +28,11 @@ class StudentShow extends Component {
             'timer' =>  '3000',
             'toast' =>  true,
         ]);
+
+        $this->emitTo('newsletter.newsletters', '$refresh');
     }
-
     
-
     public function render() {
-        return view('livewire.student.student-show');
+        return view('livewire.newsletter.newsletter-add');
     }
 }

@@ -9,10 +9,10 @@
 <div class="nav-wrapper">
     <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-subjects" role="tablist">
         <li class="nav-item">
-            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-subjects" data-toggle="tab" href="#tabs-subjects" role="tab" aria-controls="tabs-subjects" aria-selected="true"><i class="ni ni-cloud-upload-96 ml-2"></i>المواد</a>
+            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-subjects" data-toggle="tab" href="#tabs-subjects" role="tab" aria-controls="tabs-subjects" aria-selected="true"><i class="fas fa-table ml-2"></i>المواد</a>
         </li>
         <li class="nav-item mr-3">
-            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-subject-add-tab" data-toggle="tab" href="#tabs-subject-add" role="tab" aria-controls="tabs-subject-add" aria-selected="false"><i class="ni ni-bell-55 ml-2"></i>اضافة مادة</a>
+            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-subject-add-tab" data-toggle="tab" href="#tabs-subject-add" role="tab" aria-controls="tabs-subject-add" aria-selected="false"><i class="fas fa-plus ml-2"></i>اضافة مادة</a>
         </li>
     </ul>
 </div>

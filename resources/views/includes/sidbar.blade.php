@@ -59,6 +59,11 @@
                                 <i class="fas fa-graduation-cap text-info"></i> الدرجات
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link @if(Route::currentRouteName()== 'newsletter') active @endif " href="{{ route('newsletter') }}">
+                                    <i class="ni ni-bell-55 text-info"></i> الاشعارات
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <!-- Administration Panel:finish -->
@@ -66,5 +71,5 @@
             </div>
         </div>
     </div>
-        <br/><br/><a class="btn btn-warning position-relative fixed-bottom btn-block"   href="{{ route('student-add') }}" >اضافة طالب جديد</a>;
+        <br/><br/><a class="btn text-white position-relative fixed-bottom btn-block bg-gradient-info"   href="{{ route('student-add') }}" >اضافة طالب جديد</a>;
 </nav>

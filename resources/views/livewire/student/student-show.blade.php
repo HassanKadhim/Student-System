@@ -109,7 +109,7 @@
                                 </tr>
                                 @empty
                                 <td colspan="7">
-                                    <h5 class="text-center text-muted">لا يوجد غياب</h5>
+                                    <h5 class="text-center text-muted">لا يوجد امتحانات</h5>
                                 </td>
                                 @endforelse
                             </tbody>
@@ -168,8 +168,38 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+            <div class="card mt-3">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <h3 class="mb-0"> ارسال اشعار</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form wire:submit.prevent="submit">
+                        <div class="row">
+                            <div class="col-xl-12 mb-5 mb-xl-0">
+                                    <!-- card-body:start -->
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <input type="text" wire:model="title" class="form-control questionsCount" placeholder="العنوان">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <textarea rows="4" wire:model="body" class="form-control" placeholder="المحتوى ...">السلام عليكم</textarea>
+                                        </div>
+                                        <div class="col-12 mt-5">
+                                        <button type="submit" class="btn btn-primary btn-block ">ارسال</button>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     @else
     <div class="row mt-4">
