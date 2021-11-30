@@ -71,7 +71,7 @@ class User extends Authenticatable implements JWTSubject
         'profile_photo_url',
     ];
 
-    public function students(){
-        return $this->hasMany(Student::class);
+    public function student(){
+        return $this->hasOne(Student::class);
     }
 }

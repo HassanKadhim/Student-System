@@ -15,8 +15,9 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->nullable();
+            // $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('stage_id')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->string('card_number')->nullable();
             $table->string('mother_name')->nullable();
             $table->string('city')->nullable();
@@ -26,10 +27,10 @@ class CreateStudentsTable extends Migration
             $table->string('birthday')->nullable();
             $table->integer('type')->default(1); // 1 => Morning | 2 => Pararal | 3 => Night
 
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade'); 
+            // $table->foreign('user_id')
+            //     ->references('id')
+            //     ->on('users')
+            //     ->onDelete('cascade'); 
             
             $table->foreign('stage_id')
                 ->references('id')

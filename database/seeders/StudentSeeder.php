@@ -47,7 +47,7 @@ class StudentSeeder extends Seeder
 
         $student->save();
 
-        // id:2
+        // id:3
         $student = new Student();
         
         $student->user_id = 4;

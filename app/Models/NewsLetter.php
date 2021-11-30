@@ -12,5 +12,6 @@ class NewsLetter extends Model
         'body'
     ];
 
+
     use HasFactory;
 }
