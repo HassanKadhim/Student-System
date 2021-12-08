@@ -12,7 +12,7 @@ class GradeController extends Controller {
     public function grade(){
         $grade = auth()->user()->student()->with(['grades' => function($q){
             return $q->with(['subject:id,name','exam:id,name']);
-        }])->orderByDesc('id')->get();
+        }])->orderByDesc('id')->get('id','grades');
 
         return response()->json($grade);
     }
