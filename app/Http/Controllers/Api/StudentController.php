@@ -4,13 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Grade;
 
-class GradeController extends Controller {
-
-    // Get grade 
-    public function grade(){
-        $grade = auth()->user()->student()->with([
+class StudentController extends Controller {
+    
+    // Get student 
+    public function student(){
+        $students = auth()->user()->student()->with([
             'grades' => function($q){
                 return $q->with(['subject:id,name','exam:id,name']);
         }, 'timesheets' => function($q){
@@ -18,6 +17,6 @@ class GradeController extends Controller {
         }
         ])->orderByDesc('id')->get();
 
-        return response()->json($grade);
+        return response()->json(['data' => $students]);
     }
 }

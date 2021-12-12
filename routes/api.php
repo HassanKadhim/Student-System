@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Api\NewsLetterController;
 use App\Http\Controllers\Api\GradeController;
+use App\Http\Controllers\Api\NotController;
+use App\Http\Controllers\Api\StudentController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,6 +25,9 @@ Route::group(['middleware' => 'api','prefix' => 'auth'], function ($router) {
     Route::post('refresh', [LoginController::class, 'refresh']);
     Route::get('/user', [LoginController::class, 'me']);
     Route::get('/grade', [GradeController::class, 'grade']);
+    Route::get('/student', [StudentController::class, 'student']);
+    Route::get('/not', [NotController::class, 'not']);
+    
 });
 
 Route::get('/newsletter', [NewsLetterController::class, 'newsletter']);
