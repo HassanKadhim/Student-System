@@ -87,7 +87,7 @@
                                     <a rel="tooltip" class="btn btn-info btn-icon btn-sm text-white" id="tabs-student-show-tab" data-toggle="tab" href="#tabs-student-show" role="tab" aria-controls="tabs-student-show" aria-selected="false" @click="id = !id" wire:click="getStudentID({{$student->id}})">
                                         <i class="far fa-eye"></i>
                                     </a>
-                                    <a rel="tooltip" class="btn btn-danger btn-icon btn-sm text-white" data-original-title="حذف" title="" name="deletequestion">
+                                    <a rel="tooltip" class="btn btn-danger btn-icon btn-sm text-white" data-original-title="حذف" title="" name="deletequestion"  @click="id = !id" wire:click="deleteConfirmed({{$student->id}})" >
                                         <i class="fas fa-trash text-denger"></i>
                                     </a>
                                 </td>

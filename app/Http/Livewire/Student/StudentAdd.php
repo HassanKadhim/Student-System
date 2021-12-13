@@ -30,7 +30,7 @@ class StudentAdd extends Component {
             'password' =>  Hash::make($password),
         ]);
 
-        $user->students()->create([
+        $user->student()->create([
 
             'card_number'=> $this->card_number,
             'mother_name'=> $this->mother_name ,

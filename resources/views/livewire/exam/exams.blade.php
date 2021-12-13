@@ -45,7 +45,7 @@
                                     </div>
                                 </th>
                                 <td class="text-right">
-                                    <a rel="tooltip" class="btn btn-danger btn-icon btn-sm text-white" data-original-title="حذف" title="" name="deletequestion">
+                                    <a rel="tooltip" class="btn btn-danger btn-icon btn-sm text-white" data-original-title="حذف" title="" name="deletequestion" @click="id = !id" wire:click="deleteConfirmed({{$exam->id}})">
                                         <i class="fas fa-trash text-denger"></i>
                                     </a>
                                 </td>
