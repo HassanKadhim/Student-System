@@ -14,7 +14,7 @@ class StudentController extends Controller {
                 return $q->with(['subject:id,name','exam:id,name']);
         }, 'timesheets' => function($q){
             return $q->with(['subject:id,name']);
-        }
+        }, 'notifications'
         ])->orderByDesc('id')->get();
 
         return response()->json(['data' => $students]);
