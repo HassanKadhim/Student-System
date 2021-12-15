@@ -10,7 +10,8 @@ class notification extends Model
     protected $fillable = [
         'title',
         'body',
-        'student_id'
+        'student_id',
+        'color'
     ];
     public function student(){
         return $this->belongsTo(Student::class);

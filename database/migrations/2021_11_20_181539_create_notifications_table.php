@@ -18,6 +18,7 @@ class CreateNotificationsTable extends Migration
             $table->unsignedBigInteger('student_id')->nullable();
             $table->string('title')->nullable();
             $table->string('body')->nullable();
+            $table->string('color')->default("0xff349bf7");
             $table->timestamps();
 
             $table->foreign('student_id')
