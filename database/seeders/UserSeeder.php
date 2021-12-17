@@ -30,6 +30,7 @@ class UserSeeder extends Seeder
 
         $user->name = 'حسن كاظم';
         $user->email = 'HassanKadhim@gmail.com';
+        $user->profile_photo_path = 'student/img/2sLHTRZ4D-1639678739.jpg';
         $user->password = Hash::make('123456');
 
 

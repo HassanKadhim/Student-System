@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Student;
 use App\Models\User;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\Models\Stage;
 use App\Mail\SendPassword;
 use Illuminate\Support\Facades\Mail;
@@ -12,23 +13,34 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class StudentAdd extends Component {
     
     use LivewireAlert;
+    use WithFileUploads;
 
-    public $name , $mother_name , $email , $city ,$phoneNumber , $card_number , $district , $type , $birthday , $gender , $stage_id;
+    public $name , $mother_name , $email , $city ,$phoneNumber , $card_number , $district , $type , $birthday , $gender , $stage_id , $image;
 
     protected $rules = [
         'name' => 'required',
     ];
 
     public function submit() {
+
         $password = randomPassword();
 
         $this->validate();
 
+        $image = $this->image;
+        $exe = $image->extension();
+        $name = randomPassword() . '-' . time() . '.' . $exe ;
+        $image->storeAs('public/student/img' , $name);
+
+        $image = 'student/img/' . $name;
+        
         $user = User::create([
             'name'     => $this->name,
             'email'    => $this->email,
+            'profile_photo_path' => $image,
             'password' =>  Hash::make($password),
         ]);
+
 
         $user->student()->create([
 

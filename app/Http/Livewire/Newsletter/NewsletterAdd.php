@@ -30,14 +30,12 @@ class NewsletterAdd extends Component
         
     $SERVER_API_KEY = 'AAAArBOxgxc:APA91bEJwcn7naDOTcrcXhe9rywmeYPPZW-pPtDSgp_hGN4XcHcWrpHasLLeRK62FejTfFgYMnBADDev5nwlvCZWLwi-DUQN03e6kF8ZZeOdEK8Wx1L7EpV1oKbZES4QuR58v2WAMPFC';
 
-    $token_1 = 'Test Token';
+    
 
     $data = [
 
-        "to" => "/topics/toAdmin",
-        "priority" => "normal",
-        "sound" => "enabled",
-
+    "to" => "/topics/all", 
+        
         "notification" => [
 
             "title" => $this->title,
@@ -47,6 +45,8 @@ class NewsletterAdd extends Component
             "sound"=> "default" // required for sound on ios
 
         ],
+
+        
 
     ];
 
@@ -75,9 +75,6 @@ class NewsletterAdd extends Component
     curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
 
     $response = curl_exec($ch);
-
-    dd($response);
-
 
 
         $this->alert('success', 'تم ',[

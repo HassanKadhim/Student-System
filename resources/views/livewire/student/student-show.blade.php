@@ -8,7 +8,7 @@
                     <div class="col-lg-3 order-lg-2">
                         <div class="card-profile-image">
                             <a href="#">
-                                <img src="{{ asset('img\avtar.png') }}" class="rounded-circle">
+                                <img src="{{asset('storage/' . $student->user->profile_photo_path)}}" class="rounded-circle">
                             </a>
                         </div>
                     </div>
@@ -183,8 +183,16 @@
                             <div class="col-xl-12 mb-5 mb-xl-0">
                                     <!-- card-body:start -->
                                     <div class="row">
-                                        <div class="col-12 mt-3">
+                                        <div class="col-10 mt-3">
                                             <input type="text" wire:model="title" class="form-control questionsCount" placeholder="العنوان">
+                                        </div>
+                                        <div class="col-2 mt-3">
+                                            <select class="form-control section" wire:model="color" >
+                                                <option class="text-right"  disabled>نوع الاشعار</option>
+                                                    <option class="text-right" value="0xff349bf7">اعتيادي</option>
+                                                    <option class="text-right" value="0xfff6be32">تنبيه</option>
+                                                    <option class="text-right" value="0xfffa3838">انذار</option>
+                                            </select>
                                         </div>
                                         <div class="col-12 mt-3">
                                             <textarea rows="4" wire:model="body" class="form-control" placeholder="المحتوى ...">السلام عليكم</textarea>

@@ -22,7 +22,7 @@ class LoginController extends Controller
      */
     public function login() {
         
-        $credentials = request(['email', 'password']);
+        $credentials = request(['email', 'password', ]);
 
         if (! $token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
@@ -71,6 +71,24 @@ class LoginController extends Controller
             // 'expires_in' => auth()->factory()->getTTL() * 60
             'expires_in' => NULL
         ]);
+    }
+
+
+    public function setFierToken(Request $request){
+        
+        $fiertoken = auth()->user()->fiertoken;
+
+        $validator = Validator::make($request->all(), [
+            'fiertoken' => 'required',
+        ]);
+
+        if ($validator->fails()){
+            return response()->json(['message' => $validator->errors()], 400);
+        }
+
+        auth()->user()->update(['fiertoken' => $request->fiertoken ]);
+        return response()->json(['message' => 'Done update', ], 200);
+
     }
 
 

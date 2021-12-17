@@ -39,6 +39,8 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'password',
         'type',
+        'profile_photo_path',
+        'fiertoken'
     ];
 
     /**

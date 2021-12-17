@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="subject_id" >
-                                <option class="text-right" selected disabled>المادة</option>
+                                <option class="text-right"  disabled>المادة</option>
                                 @foreach ($subjects as $subject)
                                     <option class="text-right" value="{{ $subject->id }}">{{ $subject->name}}</option>
                                 @endforeach

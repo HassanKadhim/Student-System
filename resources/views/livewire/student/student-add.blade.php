@@ -74,6 +74,10 @@
                             <input type="date" wire:model="birthday" class="form-control " placeholder="تاريخ الميلاد" dir="rtl">
                         </div>
                         @error('birthday') <span class="error text-danger">يجب ادخال التاريخ</span>@enderror
+                        <div class="col-12 mt-3" dir="ltr">
+                            <input type="file" class="form-control"  name="file-1[]" data-multiple-caption="{count} files selected" class="custom-file-input" id="customFileLang" wire:model="image" lang="ar">
+                            <label class="custom-file-label text-left" for="customFileLang">اختار الصور</label>
+                        </div>
                         <div class="col-12 mt-5">
                         <button type="submit" class="btn bg-gradient-info text-white btn-block ">اضافة</button>
                         </div>
