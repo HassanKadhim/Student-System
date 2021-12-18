@@ -9,13 +9,13 @@
 		<link rel="stylesheet"  href="css/style.css" />
 		<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
 		<link rel="stylesheet" href=" {{asset('css/bootstrap.min.css')}}">
-		<link href=" {{asset('css/argon-dashboard.css?v=1.1.0')}}" rel="stylesheet" />
+		<link href=" {{asset('css/argon-dashboard.css')}}" rel="stylesheet" />
 		<link href="{{asset('js/plugins/nucleo/css/nucleo.css')}}" rel="stylesheet" />
 		<link href="{{asset('js/plugins/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
 			
-	<!--   Core   -->
-	<script src="{{asset('js/plugins/jquery/dist/jquery.min.js')}}"></script>
-	<script src="{{asset('js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+	    <!--   Core   -->
+        <script src="{{asset('js/plugins/jquery/dist/jquery.min.js')}}"></script>
+        <script src="{{asset('js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
 
     </head>
 <body dir="rtl">
