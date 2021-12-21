@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Student;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Student;
+use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -35,13 +36,15 @@ class Students extends Component {
 
     public function deleteStudent(){
         $id = $this->ID;
-        Student::find($id)->delete();
+        
+        $student = Student::find($id);
+        User::find($student->user->id)->delete();
         $this->alert(
             'success',
             'تم الحذف بنجاح'
         );
 
-        $this->emitTo('', '$refresh');
+        $this->emitTo('student.students', '$refresh');
     }
 
     public function render(){

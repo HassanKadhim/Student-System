@@ -1,6 +1,4 @@
 <div>
-
-
     <div class="row">
         <div class="col">
             <div class="card">
@@ -46,7 +44,12 @@
                                 <th scope="row">
                                     <div class="media align-items-center">
                                         <a href="#" class="avatar rounded-circle mr-3">
-                                            <img alt="" src="{{ asset('img\avtar.png') }}">
+                                            @if ($student->user->profile_photo_path)
+                                            <img alt="" src="{{asset('storage/' . $student->user->profile_photo_path)}}">
+                                            @else
+                                            <img alt="" src="{{asset('img\avtar.png')}}">      
+                                            @endif
+                                            
                                         </a>
                                         <div class="media-body">
                                             <span class="name mb-0 text-sm mr-2">{{$student->user->name}}</span>

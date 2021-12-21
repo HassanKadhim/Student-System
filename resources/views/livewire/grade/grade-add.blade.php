@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="student_id" >
-                                <option class="text-right" selected disabled>الطالب</option>
+                                <option class="text-right" selected >الطالب</option>
                                 @foreach ($students as $student)
                                     <option class="text-right" value="{{ $student->id }}">{{ $student->user->name}}</option>
                                 @endforeach
@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="exam_id" >
-                                <option class="text-right" selected disabled>الامتحان</option>
+                                <option class="text-right" selected >الامتحان</option>
                                 @foreach ($exams as $exam)
                                     <option class="text-right" value="{{ $exam->id }}">{{ $exam->name}}</option>
                                 @endforeach
@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-6 mt-3">
                             <select class="form-control section" dir="rtl" wire:model="subject_id" >
-                                <option class="text-right"  disabled>المادة</option>
+                                <option class="text-right" selected  >المادة</option>
                                 @foreach ($subjects as $subject)
                                     <option class="text-right" value="{{ $subject->id }}">{{ $subject->name}}</option>
                                 @endforeach

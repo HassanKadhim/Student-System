@@ -27,44 +27,62 @@ class StudentAdd extends Component {
 
         $this->validate();
 
-        $image = $this->image;
-        $exe = $image->extension();
-        $name = randomPassword() . '-' . time() . '.' . $exe ;
-        $image->storeAs('public/student/img' , $name);
 
-        $image = 'student/img/' . $name;
+        $check_exists = User::where('email', $this->email)->exists();
+
+        if ($check_exists) {
+
+            $this->alert('error', 'هذا الطالب موجود مسبقاً', [
+                'position' =>  'top',
+                'timer'    =>  '3000',
+                'toast'    =>  true,
+            ]
+        );
+        } else {
+
+            if($this->image){
+                $image = $this->image;
+                $exe = $image->extension();
+                $name = randomPassword() . '-' . time() . '.' . $exe ;
+                $image->storeAs('public/student/img' , $name);
         
-        $user = User::create([
-            'name'     => $this->name,
-            'email'    => $this->email,
-            'profile_photo_path' => $image,
-            'password' =>  Hash::make($password),
-        ]);
+                $image = 'student/img/' . $name;
+            }else{
+                $image ='student/img/avtar.png';
+            }
+
+            
+            $user = User::create([
+                'name'     => $this->name,
+                'email'    => $this->email,
+                'profile_photo_path' => $image,
+                'password' =>  Hash::make($password),
+            ]);
 
 
-        $user->student()->create([
+            $user->student()->create([
 
-            'card_number'=> $this->card_number,
-            'mother_name'=> $this->mother_name ,
-            'city'=> $this->city ,
-            'district'=> $this->district ,
-            'phoneNumber'=> $this->phoneNumber ,
-            'birthday'=> $this->birthday ,
-            'gender'=> $this->gender ,
-            'stage_id'=> $this->stage_id ,
+                'card_number'=> $this->card_number,
+                'mother_name'=> $this->mother_name ,
+                'city'=> $this->city ,
+                'district'=> $this->district ,
+                'phoneNumber'=> $this->phoneNumber ,
+                'birthday'=> $this->birthday ,
+                'gender'=> $this->gender ,
+                'stage_id'=> $this->stage_id ,
 
-        ]);
+            ]);
 
-        $this->alert('success', 'تم إضافة الطالب بنجاح',[
-            'position' =>  'top',
-            'timer' =>  '3000',
-            'toast' =>  true,
-        ]);
+            $this->alert('success', 'تم إضافة الطالب بنجاح',[
+                'position' =>  'top',
+                'timer' =>  '3000',
+                'toast' =>  true,
+            ]);
 
-        $this->emitTo('student.students', '$refresh');
+            $this->emitTo('student.students', '$refresh');
 
-        Mail::to($this->email)->send(new SendPassword($password));
-
+            Mail::to($this->email)->send(new SendPassword($password));
+        }    
 
 
     }
