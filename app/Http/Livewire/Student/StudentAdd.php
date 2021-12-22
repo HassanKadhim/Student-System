@@ -19,6 +19,15 @@ class StudentAdd extends Component {
 
     protected $rules = [
         'name' => 'required',
+        'phoneNumber' => 'required|max:11|min:11',
+        'mother_name' => 'required',
+        'card_number' => 'required|max:6|min:6',
+        'district' => 'required',
+        'type' => 'required',
+        'gender' => 'required',
+        'city' => 'required',
+        'birthday' => 'required',
+        'stage_id' => 'required',
     ];
 
     public function submit() {
@@ -36,7 +45,7 @@ class StudentAdd extends Component {
                 'position' =>  'top',
                 'timer'    =>  '3000',
                 'toast'    =>  true,
-            ]
+            ],
         );
         } else {
 
@@ -82,6 +91,8 @@ class StudentAdd extends Component {
             $this->emitTo('student.students', '$refresh');
 
             Mail::to($this->email)->send(new SendPassword($password));
+            
+            $this->reset();
         }    
 
 
@@ -89,9 +100,8 @@ class StudentAdd extends Component {
 
     
     public function render() {
-
+        
         $stages = Stage::get();
-
         return view('livewire.student.student-add',[ 'stages' => $stages ]);
     }
 }

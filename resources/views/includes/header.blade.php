@@ -6,6 +6,7 @@
 		<meta name="keywords" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="icon" href={{asset('img/icon.png')}}>
 		<link rel="stylesheet"  href="css/style.css" />
 		<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
 		<link rel="stylesheet" href=" {{asset('css/bootstrap.min.css')}}">
