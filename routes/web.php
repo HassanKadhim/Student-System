@@ -16,16 +16,21 @@ use App\Http\Controllers\StudentController;
 */
 
 
-Route::group(['middleware' => 'auth:sanctum'], function() {
-    
-    Route::get('/', [MainController::class, 'index'])->name('index');
-    Route::view('/student', 'pages.student')->name('student');
-    Route::view('/eaxm', 'pages.eaxm')->name('eaxm');
-    Route::view('/stage', 'pages.stage')->name('stage');
-    Route::view('/subject', 'pages.subject')->name('subject');
-    Route::view('/timesheet', 'pages.timesheet')->name('timesheet');
-    Route::view('/grade', 'pages.grade')->name('grade');
-    Route::view('/student-add', 'pages.student-add')->name('student-add');
-    Route::view('/newsletter', 'pages.newsletter')->name('newsletter');
+Route::group(['middleware' => 'auth:sanctum' ], function() {
+    Route::group(['middleware' => 'admin' ], function() {
+        Route::get('/', [MainController::class, 'index'])->name('index');
+        Route::view('/student', 'pages.student')->name('student');
+        Route::view('/eaxm', 'pages.eaxm')->name('eaxm');
+        Route::view('/stage', 'pages.stage')->name('stage');
+        Route::view('/subject', 'pages.subject')->name('subject');
+        Route::view('/timesheet', 'pages.timesheet')->name('timesheet');
+        Route::view('/grade', 'pages.grade')->name('grade');
+        Route::view('/student-add', 'pages.student-add')->name('student-add');
+        Route::view('/newsletter', 'pages.newsletter')->name('newsletter');
+    });
+    // Route::group(['middleware' => 'teacher' ], function() {
+    //     Route::get('/', [MainController::class, 'index'])->name('index');
+        
+    // });
 });
 

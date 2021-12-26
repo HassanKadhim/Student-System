@@ -8,6 +8,7 @@
   'stage.stage-add' => 'App\\Http\\Livewire\\Stage\\StageAdd',
   'stage.stages' => 'App\\Http\\Livewire\\Stage\\Stages',
   'student.student-add' => 'App\\Http\\Livewire\\Student\\StudentAdd',
+  'student.student-edit' => 'App\\Http\\Livewire\\Student\\StudentEdit',
   'student.student-show' => 'App\\Http\\Livewire\\Student\\StudentShow',
   'student.students' => 'App\\Http\\Livewire\\Student\\Students',
   'subject.subject-add' => 'App\\Http\\Livewire\\Subject\\SubjectAdd',
