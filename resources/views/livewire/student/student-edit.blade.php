@@ -1,12 +1,16 @@
 <div>
+    @if($student)
     <form wire:submit.prevent="edit">
         <div class="row">
             <div class="col-xl-12 mb-5 mb-xl-0">
                 <div class="card bg-gradient-secondary shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
-                            <div class="col-lg-8">
-                            <h2 class="mb-0">اضافة طالب جديد</h2>
+                            <div class="col-lg-10">
+                            <h2 class="mb-0">تعديل  طالب </h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <a  type="" class="btn btn-danger text-white btn-block  @click="id = !id" wire:click="deleteConfirmed({{$student->id}})" >حذف البيانات</a>
                             </div>
                         </div>
                     </div>
@@ -38,7 +42,7 @@
                             <select class="form-control section" dir="rtl" wire:model= "gender" >
                                 <option  selected  >الجنس</option>
                                 <option value="ذكر">ذكر</option>
-                                <option value="اناثى"> اناثى</option>
+                                <option value="انثى"> انثى</option>
                             </select>
                             @error('gender') <span class="error text-danger">يجب اختيار الجنس</span> @enderror
                         </div>
@@ -74,7 +78,7 @@
                             @error('district') <span class="error text-danger">يجب اختيار االمنطقة</span> @enderror
                         </div>
                         <div class="col-6 mt-3">
-                            <input type="date" wire:model="birthday" class="form-control " placeholder="تاريخ الميلاد" dir="rtl">
+                            <input type="text" wire:model="birthday" class="form-control " placeholder="تاريخ الميلاد" dir="rtl">
                             @error('birthday') <span class="error text-danger">يجب ادخال التاريخ</span>@enderror
                         </div>
                         <div class="col-12 mt-3" dir="ltr">
@@ -82,7 +86,7 @@
                             <label class="custom-file-label text-left" for="customFileLang">اختار الصور</label>
                         </div>
                         <div class="col-12 mt-5">
-                        <button onclick="myFunction()" type="submit" class="btn bg-gradient-info text-white btn-block ">اضافة</button>
+                        <button onclick="myFunction()" type="submit" class="btn bg-gradient-info text-white btn-block ">تعديل</button>
                         </div>
                     </div>
                     <!-- card-body:finish -->
@@ -91,5 +95,11 @@
             </div>
         </div>
     </form>
-    
+    @else
+    <div class="row mt-4">
+        <div class="w-100 text-center" style="font-size: 26px">
+            <i class="fas fa-spinner fa-spin fa-3x"></i>
+        </div>
+    </div>
+    @endif
 </div>

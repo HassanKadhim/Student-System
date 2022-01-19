@@ -66,5 +66,15 @@ class UserSeeder extends Seeder
 
 
         $user->save();
+
+        // id:6
+        $user = new User();
+
+        $user->name = 'زينب حميد مجيد';
+        $user->email = 'alfayez.zainab@gmail.com';
+        $user->password = Hash::make('123456');
+
+
+        $user->save();
     }
 }

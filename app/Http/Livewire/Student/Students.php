@@ -51,7 +51,9 @@ class Students extends Component {
         $search = '%'.$this->search.'%';
         $students = Student::whereHas('user' , function($query) use($search){
             $query->where('name' , 'LIKE' , $search);
-            })->orderByDesc('id')->paginate(6);
+        })->whereHas('user' , function($query){
+            $query->where('type' , 'student');
+        })->orderByDesc('id')->paginate(6);
 
         return view('livewire.student.students',[ "students" => $students ]);
     }

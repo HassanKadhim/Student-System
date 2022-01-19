@@ -9,7 +9,8 @@ class NewsLetter extends Model
 {
     protected $fillable = [
         'title',
-        'body'
+        'body',
+        'image_path'
     ];
 
 

@@ -17,6 +17,7 @@ class CreateNewsLettersTable extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->text('body')->nullable();
+            $table->text('image_path')->nullable();
             $table->timestamps();
         });
     }

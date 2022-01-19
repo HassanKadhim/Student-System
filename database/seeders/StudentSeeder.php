@@ -62,5 +62,21 @@ class StudentSeeder extends Seeder
         $student->type = '3';
 
         $student->save();
+
+        // id:4
+        $student = new Student();
+        
+        $student->user_id = 6;
+        $student->stage_id = 4;
+        $student->mother_name = 'اسم الام';
+        $student->city = 'بصرة';
+        $student->district = 'الجزائر';
+        $student->phoneNumber = '07711111111';
+        $student->card_number = '20189043';
+        $student->gender = 'انثى';
+        $student->birthday = '1984/9/8';
+        $student->type = '1';
+
+        $student->save();
     }
 }

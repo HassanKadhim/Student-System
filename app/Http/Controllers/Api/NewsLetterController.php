@@ -10,7 +10,7 @@ class NewsLetterController extends Controller {
 
     // Get newsletter 
     public function newsletter(){
-        $newsletter = NewsLetter::orderByDesc('id')->get(['id','title', 'body' ,'created_at as date']);
+        $newsletter = NewsLetter::orderByDesc('id')->get(['id','title', 'body' ,'image_path','created_at as date']);
         return response()->json($newsletter);
     }
 }

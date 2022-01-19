@@ -6,13 +6,15 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 use Firebase\JWT\JWT;
+use Livewire\WithFileUploads;
 
 
 
 class NewsletterAdd extends Component
 {
     use  LivewireAlert;
-    public $title , $body ;
+    use  WithFileUploads;
+    public $title , $body , $image ;
     
     protected $rules = [
         'title' => 'required',
@@ -22,9 +24,23 @@ class NewsletterAdd extends Component
     public function submit() {
         $this->validate();
 
+        if($this->image){
+
+            $image = $this->image;
+            $exe = $image->extension();
+            $name = randomPassword() . '-' . time() . '.' . $exe ;
+            $image->storeAs('public/newsletter/img' , $name);
+    
+            $image = 'newsletter/img/' . $name;
+        }else{
+            $image = null;
+        }
+
+
         NewsLetter::create([
             'title' => $this->title,
-            'body' => $this->body,
+            'body' => $this->body, 
+            'image_path' => $image, 
         ]);
 
         

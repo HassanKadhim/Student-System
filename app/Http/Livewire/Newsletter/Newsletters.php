@@ -36,7 +36,7 @@ class Newsletters extends Component
             'تم الحذف بنجاح'
         );
 
-        $this->emitTo('admin.supermarket.services.services', '$refresh');
+        $this->emitTo('newsletter.newsletters', '$refresh');
     }
 
     public function render() {

@@ -17,8 +17,11 @@ use App\Http\Controllers\StudentController;
 
 
 Route::group(['middleware' => 'auth:sanctum' ], function() {
-    Route::group(['middleware' => 'admin' ], function() {
-        Route::get('/', [MainController::class, 'index'])->name('index');
+
+    Route::get('/', [MainController::class, 'index'])->name('index');
+
+    // Route::group(['prefix' => 'admin' , 'middleware' => 'admin' ], function() {
+        
         Route::view('/student', 'pages.student')->name('student');
         Route::view('/eaxm', 'pages.eaxm')->name('eaxm');
         Route::view('/stage', 'pages.stage')->name('stage');
@@ -27,9 +30,9 @@ Route::group(['middleware' => 'auth:sanctum' ], function() {
         Route::view('/grade', 'pages.grade')->name('grade');
         Route::view('/student-add', 'pages.student-add')->name('student-add');
         Route::view('/newsletter', 'pages.newsletter')->name('newsletter');
-    });
-    // Route::group(['middleware' => 'teacher' ], function() {
-    //     Route::get('/', [MainController::class, 'index'])->name('index');
+    // });
+
+    // Route::group([ 'prefix' => 'teacher' ,'middleware' => 'teacher' ], function() {
         
     // });
 });
