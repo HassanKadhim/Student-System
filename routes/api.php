@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\NewsLetterController;
 use App\Http\Controllers\Api\GradeController;
 use App\Http\Controllers\Api\NotController;
 use App\Http\Controllers\Api\StudentController;
+    
 /*
 |--------------------------------------------------------------------------
 | API Routes

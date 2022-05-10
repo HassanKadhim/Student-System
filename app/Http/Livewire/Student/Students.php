@@ -18,8 +18,8 @@ class Students extends Component {
 
     protected $queryString = ['search'];
 
-    public function getStudentID($id){
-        $this->emit('getStudentID' , $id);
+    public function getEmployeID($id){
+        $this->emit('getEmployeID' , $id);
     }
 
     public function deleteConfirmed($id){
